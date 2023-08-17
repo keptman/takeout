@@ -158,6 +158,7 @@ public class DishServiceImpl implements DishService {
      * @param id
      */
     @Transactional
+    @Override
     public void startOrStop(Integer status, Long id) {
         Dish dish = Dish.builder()
                 .id(id)
@@ -182,11 +183,27 @@ public class DishServiceImpl implements DishService {
             }
         }
     }
+
+    /**
+     * 根据分类id查询菜品
+     * @param categoryId
+     * @return
+     */
+    @Override
+    public List<Dish> list(Long categoryId) {
+        Dish dish = Dish.builder()
+                .categoryId(categoryId)
+                .status(StatusConstant.ENABLE)
+                .build();
+        return dishMapper.list(dish);
+    }
+
     /**
      * 条件查询菜品和口味
      * @param dish
      * @return
      */
+    @Override
     public List<DishVO> listWithFlavor(Dish dish) {
         List<Dish> dishList = dishMapper.list(dish);
 
@@ -202,7 +219,6 @@ public class DishServiceImpl implements DishService {
             dishVO.setFlavors(flavors);
             dishVOList.add(dishVO);
         }
-
         return dishVOList;
     }
 }
