@@ -11,6 +11,8 @@ import java.util.List;
 public interface SetmealService {
 
 
+
+
     /**
      * 分页查询套餐
      * @param setmealPageQueryDTO
@@ -45,6 +47,10 @@ public interface SetmealService {
      */
     SetmealVO getByIdWithDish(Long id);
 
+    /**
+     * 新增套餐
+     * @param setmealDTO
+     */
     void saveWithDish(SetmealDTO setmealDTO);
 
     /**
@@ -53,4 +59,10 @@ public interface SetmealService {
      * @param id
      */
     void startOrStop(Integer status, Long id);
+
+    /**
+     * 套餐批量删除
+     * @param ids
+     */
+    void deleteBatch(List<Long> ids);
 }
