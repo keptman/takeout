@@ -53,5 +53,9 @@ sky:
   wechat:
     appid:  ${sky.wechat.appid}
     secret: ${sky.wechat.secret}
+  shop:
+    address: 广东省深圳市南山区新屋村
+  baidu:
+    ak: GbI01X77Q1j2VFNb9ay3cAthGVO4LfMB
 
 
