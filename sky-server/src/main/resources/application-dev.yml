@@ -8,8 +8,8 @@ sky:
     password: 123456
   alioss:
     endpoint: oss-cn-shenzhen.aliyuncs.com
-    access-key-id: LTAI5tSQWUnj8tNRHmd1K1NY
-    access-key-secret: yLlHBTitYemsA55JoAhvgxtYUluhVu
+    access-key-id: #
+    access-key-secret: #
     bucket-name: myshytakeout
   redis:
     host: localhost
